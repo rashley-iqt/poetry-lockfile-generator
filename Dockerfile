@@ -11,4 +11,5 @@ RUN curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-instal
     curl -sSL https://install.python-poetry.org | POETRY_HOME=/etc/poetry python3 - --version ${poetry_version}
 
 WORKDIR /src
+ENV PATH="${PATH}:/etc/poetry/bin"
 CMD ["bash"]
